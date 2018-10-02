@@ -16,5 +16,9 @@ class TestStringMethods(unittest.TestCase):
         response = execute(incorrect_boarding_cards_version_two)
         self.assertFalse(response['status'])
 
+    def test_case_with_empty_data(self):
+        response = execute([])
+        self.assertFalse(response['status'])
+
 if __name__ == '__main__':
     unittest.main()
